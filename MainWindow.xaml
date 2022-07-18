@@ -4,17 +4,34 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DynamicTestingWPF"
+        xmlns:viewmodels="clr-namespace:DynamicTestingWPF.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
+    <!--Boolean to Visibility Type converter || for changing visiblity-->
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibility"/>
+    </Window.Resources>
+
+    <Window.DataContext>
+        <viewmodels:MainWindowViewModel/>
+    </Window.DataContext>
+
     <Grid>
-        <TabControl>
+        <Button Content="Hide" Command="{Binding HidePanelCommand}" HorizontalAlignment="Left" Margin="295,30,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button Content="Show" Command="{Binding ShowPanelCommand}" HorizontalAlignment="Left" Margin="400,30,0,0" VerticalAlignment="Top" Width="100"/>
+
+        <TabControl Margin="0,50,0,0">
             <TabItem Header="Datasets">
                 <!--User Control-->
+                <local:DatasetsTabItemUserControl x:Name="datasetsUserControl" Width="800" Height="355"/>
             </TabItem>
 
-            <TabItem Header="Graphs">
+            <TabItem Header="Graphs" Visibility="{Binding IsPanelVisible, Converter={StaticResource BooleanToVisibility}}">
                 <!--User Control-->
+                <local:GraphsTabItemUserControl x:Name="graphsUserControl" Width="800" Height="355"/>
             </TabItem>
         </TabControl>
+        <Label Content="Show/Hide Controls from MainWindow -->" Margin="46,19,510,389"/>
     </Grid>
 </Window>

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DynamicTestingWPF.ViewModels;
 
 namespace DynamicTestingWPF
 {
@@ -20,9 +21,22 @@ namespace DynamicTestingWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        //global variables
+        //readonly MainWindowViewModel mainWindowViewModel;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            //setting DataContext of UserControls to the window's dataContext so that they can interface
+            datasetsUserControl.DataContext = this.DataContext;
+            graphsUserControl.DataContext = this.DataContext;
+
+            //initializing view model
+            //mainWindowViewModel = new MainWindowViewModel();
+
+            //setting datacontext
+            //this.DataContext = mainWindowViewModel;
         }
     }
 }

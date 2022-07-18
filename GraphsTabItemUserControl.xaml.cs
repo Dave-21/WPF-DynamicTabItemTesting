@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
+using DynamicTestingWPF.ViewModels;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -21,6 +22,12 @@ namespace DynamicTestingWPF
         public GraphsTabItemUserControl()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(((MainWindowViewModel)this.DataContext).TextBoxContent);
+            //MessageBox.Show(((MainWindowViewModel)this.DataContext).LabelContent + "");
         }
     }
 }

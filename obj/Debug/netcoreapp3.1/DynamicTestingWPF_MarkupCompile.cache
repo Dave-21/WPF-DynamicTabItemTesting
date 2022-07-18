@@ -1,5 +1,5 @@
 ﻿DynamicTestingWPF
-1.0.0.0
+
 
 winexe
 C#
@@ -12,7 +12,7 @@ TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\david\source\repos\DynamicTestingWPF\App.xaml
 31839729571
 
-91774338901
+71187845109
 192-1533232326
 DatasetsTabItemUserControl.xaml;GraphsTabItemUserControl.xaml;MainWindow.xaml;
 

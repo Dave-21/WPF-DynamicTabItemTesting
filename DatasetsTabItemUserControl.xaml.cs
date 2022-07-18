@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DynamicTestingWPF.ViewModels;
 
 namespace DynamicTestingWPF
 {
@@ -21,6 +22,11 @@ namespace DynamicTestingWPF
         public DatasetsTabItemUserControl()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(((MainWindowViewModel)this.DataContext).TextBoxContent);
         }
     }
 }
