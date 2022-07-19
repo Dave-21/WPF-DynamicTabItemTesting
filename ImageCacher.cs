@@ -50,6 +50,39 @@ namespace DynamicTestingWPF
             return imageModel;
         }
 
+
+        public BitmapImage GetImageFromCacheNoModel(string filePath)
+        {
+            byte[] byteArr;
+            string fileName = Path.GetFileName(filePath);
+
+            try
+            {
+                _memoryCache.TryGetValue(fileName, out byteArr);
+            }
+            catch
+            {
+                return null;
+            }
+
+            return ConvertByteArrayToImage(byteArr);
+        }
+        public void CacheImageNoModel(string filePath)
+        {
+            //read timestamp
+            DateTime fileLastEditDate = File.GetLastWriteTime(filePath);
+            fileLastEditDate = fileLastEditDate.AddMilliseconds(-fileLastEditDate.Millisecond);
+
+            //open file and read its contents into byte array
+            byte[] imageByteArray = File.ReadAllBytes(filePath);
+
+            //set cache options. Objects in memory cache will expire after 120 seconds
+            var memoryCacheEntryOptions = new MemoryCacheEntryOptions().SetSlidingExpiration(TimeSpan.FromSeconds(120));
+
+            //cache image using set. There's also Create, but we haven't tested that. The key is the imagePath
+            _memoryCache.Set(Path.GetFileName(filePath), imageByteArray, memoryCacheEntryOptions);
+        }
+
         public void CacheImage(string filePath)
         {
             ImageModel imageModel;

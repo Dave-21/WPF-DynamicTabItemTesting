@@ -67,7 +67,7 @@ namespace DynamicTestingWPF
 
             try
             {
-                imageCacher.CacheImage(filePath);
+                imageCacher.CacheImageNoModel(filePath);
 
 
                 /*                //first pass
@@ -90,10 +90,10 @@ namespace DynamicTestingWPF
             string fileName = selectGetFileTextBox.Text;
             ImageCacher imageCacher = new ImageCacher(memoryCache);
 
-            ImageModel imageModel = imageCacher.GetImageFromCache(fileName);
-            BitmapImage bitmapImage = imageCacher.ConvertByteArrayToImage(imageModel.Content);
+            //ImageModel imageModel = imageCacher.GetImageFromCache(fileName);
+            //BitmapImage bitmapImage = imageCacher.ConvertByteArrayToImage(imageModel.Content);
 
-            ((MainWindowViewModel)this.DataContext).BitmapImageSource = bitmapImage;
+            ((MainWindowViewModel)this.DataContext).BitmapImageSource = imageCacher.GetImageFromCacheNoModel(fileName);
             //imageHolder.Source = bitmapImage;
         }
     }
