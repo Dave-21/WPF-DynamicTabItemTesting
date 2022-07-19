@@ -18,10 +18,10 @@
     </Window.DataContext>
 
     <Grid>
-        <Button Content="Hide" Command="{Binding HidePanelCommand}" HorizontalAlignment="Left" Margin="295,30,0,0" VerticalAlignment="Top" Width="100"/>
-        <Button Content="Show" Command="{Binding ShowPanelCommand}" HorizontalAlignment="Left" Margin="400,30,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button Content="Hide" Command="{Binding HidePanelCommand}" HorizontalAlignment="Left" Margin="478,17,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button Content="Show" Command="{Binding ShowPanelCommand}" HorizontalAlignment="Left" Margin="583,17,0,0" VerticalAlignment="Top" Width="100"/>
 
-        <TabControl Margin="0,50,0,0">
+        <TabControl Margin="0,63,0,0">
             <TabItem Header="Datasets">
                 <!--User Control-->
                 <local:DatasetsTabItemUserControl x:Name="datasetsUserControl" Width="800" Height="355"/>
@@ -32,6 +32,9 @@
                 <local:GraphsTabItemUserControl x:Name="graphsUserControl" Width="800" Height="355"/>
             </TabItem>
         </TabControl>
-        <Label Content="Show/Hide Controls from MainWindow -->" Margin="46,19,510,389"/>
+        <Label Content="Show/Hide Controls from MainWindow -->" Margin="229,14,327,394"/>
+        <Button Name="openFile" Content="Cache Image" HorizontalAlignment="Left" Margin="701,17,0,0" VerticalAlignment="Top" Height="20" Width="89" Click="openFile_Click"/>
+        <Button Name="getCachedImage" Content="Get Cached Image" HorizontalAlignment="Left" Margin="46,28,0,0" VerticalAlignment="Top" Height="30" Width="103" Click="getCachedImage_Click"/>
+        <TextBox Name="selectGetFileTextBox"  HorizontalAlignment="Left" Margin="154,40,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>

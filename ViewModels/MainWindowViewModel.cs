@@ -1,6 +1,7 @@
 ﻿using DynamicTestingWPF.Commands;
 using System.ComponentModel;
 using System.Windows.Input;
+using System.Windows.Media.Imaging;
 
 namespace DynamicTestingWPF.ViewModels
 {
@@ -10,14 +11,30 @@ namespace DynamicTestingWPF.ViewModels
         private ICommand _showPanelCommand;
         private ICommand _hidePanelCommand;
 
+        //for image in graph tabitem. In TG, it will be a list of BitmapImages. So, List<BitmapImage> _graphChartBitmapImages;
+        private BitmapImage _bitmapImageSource;
+
         //for TextBox and Label
-        string _textBoxContent = string.Empty;
+        private string _textBoxContent = string.Empty;
         //string labelContent = string.Empty;
 
         public MainWindowViewModel()
         {
             //default to not visible
             IsPanelVisible = false;
+        }
+
+        public BitmapImage BitmapImageSource
+        {
+            get
+            {
+                return _bitmapImageSource;
+            }
+            set
+            {
+                _bitmapImageSource = value;
+                OnPropertyChanged("BitmapImageSource");
+            }
         }
 
         public string TextBoxContent
