@@ -1,0 +1,21 @@
+﻿<Window x:Class="DynamicTestingWPF.ListBoxTestWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DynamicTestingWPF"
+        mc:Ignorable="d"
+        Title="ListBoxTestWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="{Binding Path=SelectedTxtBlockIndex}" Margin="400,217,164,130" />
+        <ListBox ItemsSource="{Binding Path=TextBlocks}" SelectedIndex="{Binding Path=SelectedTxtBlockIndex}" Margin="0,0,497,0">
+            <!--itemssource="{binding path=textblocks}"-->
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock DataContext="{Binding Path=TextBlocks}" Text="{Binding Path=TextBlockContent}" Width="100"/>
+                    <!--{Binding Path=Name}-->
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>

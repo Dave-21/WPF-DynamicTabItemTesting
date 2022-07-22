@@ -50,6 +50,7 @@ C:\Users\david\source\repos\DynamicTestingWPF\bin\Debug\netcoreapp3.1\runtimes\w
 C:\Users\david\source\repos\DynamicTestingWPF\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
 C:\Users\david\source\repos\DynamicTestingWPF\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Users\david\source\repos\DynamicTestingWPF\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
+C:\Users\david\source\repos\DynamicTestingWPF\obj\Debug\netcoreapp3.1\DynamicTestingWPF.csproj.AssemblyReference.cache
 C:\Users\david\source\repos\DynamicTestingWPF\obj\Debug\netcoreapp3.1\DynamicTestingWPF.csproj.ResolveComReference.cache
 C:\Users\david\source\repos\DynamicTestingWPF\obj\Debug\netcoreapp3.1\DatasetsTabItemUserControl.g.cs
 C:\Users\david\source\repos\DynamicTestingWPF\obj\Debug\netcoreapp3.1\GraphsTabItemUserControl.g.cs
@@ -70,3 +71,5 @@ C:\Users\david\source\repos\DynamicTestingWPF\obj\Debug\netcoreapp3.1\DynamicTes
 C:\Users\david\source\repos\DynamicTestingWPF\obj\Debug\netcoreapp3.1\DynamicTestingWPF.dll
 C:\Users\david\source\repos\DynamicTestingWPF\obj\Debug\netcoreapp3.1\DynamicTestingWPF.pdb
 C:\Users\david\source\repos\DynamicTestingWPF\obj\Debug\netcoreapp3.1\DynamicTestingWPF.genruntimeconfig.cache
+C:\Users\david\source\repos\DynamicTestingWPF\obj\Debug\netcoreapp3.1\ListBoxTestWindow.g.cs
+C:\Users\david\source\repos\DynamicTestingWPF\obj\Debug\netcoreapp3.1\ListBoxTestWindow.baml

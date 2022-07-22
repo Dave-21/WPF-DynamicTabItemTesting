@@ -2,6 +2,8 @@
 using System.ComponentModel;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
+using DynamicTestingWPF.Models;
+using System.Collections.ObjectModel;
 
 namespace DynamicTestingWPF.ViewModels
 {
@@ -18,10 +20,41 @@ namespace DynamicTestingWPF.ViewModels
         private string _textBoxContent = string.Empty;
         //string labelContent = string.Empty;
 
+        //for ListBox
+        private ObservableCollection<TextBlockTemplate> _textBlocks;
+        private int _selectedTxtBlockIndex;
+
         public MainWindowViewModel()
         {
             //default to not visible
             IsPanelVisible = false;
+            TextBlocks = new ObservableCollection<TextBlockTemplate>();
+        }
+
+        //for ListBox
+        public ObservableCollection<TextBlockTemplate> TextBlocks
+        {
+            get
+            {
+                return _textBlocks;
+            }
+            set
+            {
+                _textBlocks = value;
+                OnPropertyChanged("TextBlocks");
+            }
+        }
+        public int SelectedTxtBlockIndex
+        {
+            get
+            {
+                return _selectedTxtBlockIndex;
+            }
+            set
+            {
+                _selectedTxtBlockIndex = value;
+                OnPropertyChanged("SelectedTxtBlockIndex");
+            }
         }
 
         public BitmapImage BitmapImageSource

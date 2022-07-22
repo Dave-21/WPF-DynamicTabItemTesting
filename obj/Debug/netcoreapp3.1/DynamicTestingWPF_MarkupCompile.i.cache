@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\david\source\repos\DynamicTestingWPF\App.xaml
-31839729571
+4868487349
 
-11-1897036730
+141493554722
 220626929080
-DatasetsTabItemUserControl.xaml;GraphsTabItemUserControl.xaml;MainWindow.xaml;
+DatasetsTabItemUserControl.xaml;GraphsTabItemUserControl.xaml;ListBoxTestWindow.xaml;MainWindow.xaml;
 
-True
+False
 

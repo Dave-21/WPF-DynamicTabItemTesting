@@ -8,11 +8,19 @@
              mc:Ignorable="d" 
              d:DesignHeight="355" d:DesignWidth="800">
     <Grid>
-        <TextBox HorizontalAlignment="Center" Text="{Binding TextBoxContent}" TextWrapping="Wrap" VerticalAlignment="Center" Width="120"/>
-        <Button Content="Hide -from UserControl" Command="{Binding HidePanelCommand}" HorizontalAlignment="Left" Margin="182,0,0,0" VerticalAlignment="Center" Width="153"/>
-        <Button Content="Show -from UserControl" Command="{Binding ShowPanelCommand}" HorizontalAlignment="Left" Margin="465,0,0,0" VerticalAlignment="Center" Width="153"/>
-        <Button Content="Button" HorizontalAlignment="Center" Margin="0,132,0,0" VerticalAlignment="Top" Click="Button_Click"/>
 
-
+        <ListBox ItemsSource="{Binding Path=TextBlocks}" SelectedIndex="{Binding Path=SelectedTxtBlockIndex}" Margin="0,0,497,0">
+            <!--itemssource="{binding path=textblocks}"-->
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="Skreet" Width="100"/><!--{Binding Path=Name}-->
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <TextBox HorizontalAlignment="Left" Text="{Binding TextBoxContent}" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="466,194,0,0"/>
+        <Button Content="Hide -from UserControl" Command="{Binding HidePanelCommand}" HorizontalAlignment="Left" Margin="308,193,0,0" VerticalAlignment="Top" Width="153"/>
+        <Button Content="Show -from UserControl" Command="{Binding ShowPanelCommand}" HorizontalAlignment="Left" Margin="591,193,0,0" VerticalAlignment="Top" Width="153"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="507,158,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Label Content="{Binding Path=SelectedTxtBlockIndex}" HorizontalAlignment="Left" Margin="547,93,0,0" VerticalAlignment="Top"/>
     </Grid>
 </UserControl>

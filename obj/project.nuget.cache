@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oUoZ3Oi2933wB0MXEf1GlQZRxKx2G6Z2ztqRwjreVwffzJkVYS2unAmdlFnc0tojl0muwHlXCJEVt+aNqXt/1w==",
+  "dgSpecHash": "MX0CfP9qV8YC30qftnwwq0wArNwLv+sSx5/YEw5pTP42vTXbxREl8qn/9HKWZuz4aC3LeFwAwMEOLDy1Po6AXA==",
   "success": true,
   "projectFilePath": "C:\\Users\\david\\source\\repos\\DynamicTestingWPF\\DynamicTestingWPF.csproj",
   "expectedPackageFiles": [
@@ -43,7 +43,8 @@
     "C:\\Users\\david\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
     "C:\\Users\\david\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
     "C:\\Users\\david\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
-    "C:\\Users\\david\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
+    "C:\\Users\\david\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.27\\microsoft.netcore.app.host.win-x64.3.1.27.nupkg.sha512"
   ],
   "logs": []
 }

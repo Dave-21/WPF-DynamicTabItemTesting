@@ -13,9 +13,9 @@
         <BooleanToVisibilityConverter x:Key="BooleanToVisibility"/>
     </Window.Resources>
 
-    <Window.DataContext>
+    <!--<Window.DataContext>
         <viewmodels:MainWindowViewModel/>
-    </Window.DataContext>
+    </Window.DataContext>-->
 
     <Grid>
         <Button Content="Hide" Command="{Binding HidePanelCommand}" HorizontalAlignment="Left" Margin="478,17,0,0" VerticalAlignment="Top" Width="100"/>

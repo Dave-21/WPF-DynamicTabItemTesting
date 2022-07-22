@@ -32,13 +32,16 @@ namespace DynamicTestingWPF
         //objects for caching
         //IHost host = Host.CreateDefaultBuilder().ConfigureServices(services => services.AddMemoryCache()).Build();
 
+        public MainWindowViewModel mainViewModel = new MainWindowViewModel();
+
         IMemoryCache memoryCache = Host.CreateDefaultBuilder().ConfigureServices(services => services.AddMemoryCache()).Build().Services.GetRequiredService<IMemoryCache>();
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = mainViewModel;
 
             //setting DataContext of UserControls to the window's dataContext so that they can interface
-            datasetsUserControl.DataContext = this.DataContext;
+            datasetsUserControl.DataContext = mainViewModel;
             graphsUserControl.DataContext = this.DataContext;
 
             //initializing view model

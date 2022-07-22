@@ -13,12 +13,18 @@
     <Compile Update="GraphsTabItemUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ListBoxTestWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="DatasetsTabItemUserControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="GraphsTabItemUserControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ListBoxTestWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

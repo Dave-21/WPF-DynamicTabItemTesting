@@ -7,6 +7,7 @@ using System;
 using System.IO;
 //using System.Drawing;
 using System.Windows.Media.Imaging;
+using System.Windows.Controls;
 
 namespace DynamicTestingWPF
 {
@@ -67,6 +68,12 @@ namespace DynamicTestingWPF
 
             return ConvertByteArrayToImage(byteArr);
         }
+
+/*        public byte[] ConvertImageToByteArray(Image img)
+        {
+
+        }*/
+
         public void CacheImageNoModel(string filePath)
         {
             //read timestamp
@@ -77,7 +84,12 @@ namespace DynamicTestingWPF
             byte[] imageByteArray = File.ReadAllBytes(filePath);
 
             //set cache options. Objects in memory cache will expire after 120 seconds
-            var memoryCacheEntryOptions = new MemoryCacheEntryOptions().SetSlidingExpiration(TimeSpan.FromSeconds(120));
+            //.SetSlidingExpiration(TimeSpan.FromSeconds(120))
+            MemoryCacheEntryOptions memoryCacheEntryOptions = new MemoryCacheEntryOptions()
+            {
+                AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(120)
+                
+            };
 
             //cache image using set. There's also Create, but we haven't tested that. The key is the imagePath
             _memoryCache.Set(Path.GetFileName(filePath), imageByteArray, memoryCacheEntryOptions);
