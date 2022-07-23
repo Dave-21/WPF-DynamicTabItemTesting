@@ -28,8 +28,8 @@ namespace DynamicTestingWPF
             this.DataContext = windowViewModel;
 
             windowViewModel.TextBlocks.Add(new TextBlockTemplate() { TextBlockContent = "skeeters" });
-            windowViewModel.TextBlocks.Add(new TextBlockTemplate() { TextBlockContent = "skeeters" });
-            windowViewModel.TextBlocks.Add(new TextBlockTemplate() { TextBlockContent = "skeeters" });
+            windowViewModel.TextBlocks.Add(new TextBlockTemplate() { TextBlockContent = "beeter" });
+            windowViewModel.TextBlocks.Add(new TextBlockTemplate() { TextBlockContent = "ddeeter" });
         }
     }
 }

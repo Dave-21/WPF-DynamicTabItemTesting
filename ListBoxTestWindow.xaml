@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DynamicTestingWPF"
+        xmlns:models="clr-namespace:DynamicTestingWPF.Models"
         mc:Ignorable="d"
         Title="ListBoxTestWindow" Height="450" Width="800">
     <Grid>
@@ -11,8 +12,8 @@
         <ListBox ItemsSource="{Binding Path=TextBlocks}" SelectedIndex="{Binding Path=SelectedTxtBlockIndex}" Margin="0,0,497,0">
             <!--itemssource="{binding path=textblocks}"-->
             <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <TextBlock DataContext="{Binding Path=TextBlocks}" Text="{Binding Path=TextBlockContent}" Width="100"/>
+                <DataTemplate DataType="models:TextBlockTemplate">
+                    <TextBlock Text="{Binding Path=TextBlockContent}" Width="100"/>
                     <!--{Binding Path=Name}-->
                 </DataTemplate>
             </ListBox.ItemTemplate>
