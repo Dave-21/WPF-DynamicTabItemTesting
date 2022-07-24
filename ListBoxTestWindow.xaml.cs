@@ -19,17 +19,24 @@ namespace DynamicTestingWPF
     /// </summary>
     public partial class ListBoxTestWindow : Window
     {
-        public ListBoxTestWindowViewModel windowViewModel = new ListBoxTestWindowViewModel();
+/*        private static List<string> things = new List<string>();
+        private ListBoxTestWindowViewModel windowViewModel = new ListBoxTestWindowViewModel(things);*/
 
         public ListBoxTestWindow()
         {
             InitializeComponent();
+            
+            ListBoxTestWindowViewModel windowViewModel = null;
 
             this.DataContext = windowViewModel;
+            List<string> things = new List<string>();
 
-            windowViewModel.TextBlocks.Add(new TextBlockTemplate() { TextBlockContent = "skeeters" });
-            windowViewModel.TextBlocks.Add(new TextBlockTemplate() { TextBlockContent = "beeter" });
-            windowViewModel.TextBlocks.Add(new TextBlockTemplate() { TextBlockContent = "ddeeter" });
+            things.Add("crep");
+            things.Add("sheep");
+            things.Add("beep");
+
+            windowViewModel = new ListBoxTestWindowViewModel(things);
+
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using DynamicTestingWPF.Models;
 using System.Collections.ObjectModel;
+using System.Collections.Generic;
 
 namespace DynamicTestingWPF.ViewModels
 {
@@ -12,6 +13,16 @@ namespace DynamicTestingWPF.ViewModels
         public ListBoxTestWindowViewModel()
         {
             TextBlocks = new ObservableCollection<TextBlockTemplate>();
+        }
+
+        public ListBoxTestWindowViewModel(List<string> buttonContents)
+        {
+            TextBlocks = new ObservableCollection<TextBlockTemplate>();
+
+            foreach (string content in buttonContents)
+            {
+                TextBlocks.Add(new TextBlockTemplate() { TextBlockContent = content });
+            }
         }
 
         public ObservableCollection<TextBlockTemplate> TextBlocks
