@@ -10,15 +10,24 @@
     <Compile Update="DatasetsTabItemUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="DatasetUserControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="GraphsTabItemUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="ListBoxTestWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Window1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="DatasetsTabItemUserControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DatasetUserControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="GraphsTabItemUserControl.xaml">
@@ -28,6 +37,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Window1.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
